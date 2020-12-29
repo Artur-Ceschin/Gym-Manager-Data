@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root{
     --main-color:#7159c1;
-    --text-color: #777
+    --text-color: #777;
+    --secondary-color:#F7DD1E;
 }
 *{
     margin: 0;
@@ -8,8 +11,6 @@
     border: none;
     box-sizing: border-box;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -41,7 +42,6 @@ header{
 }
 
 .links a:hover{
-    text-decoration: underline;
     color: var(--main-color);
 }
 
@@ -49,12 +49,88 @@ header{
     content: "";
     width: 0;
     height:2px;
+    background-color: var(--main-color);
     position: absolute;
     left: 0;
-    bottom: -2px;
+    bottom: -4px;
 }
 
-.links a:hover:after{
+.links a:hover::after{
     width: 100%;
-    transition: width 200ms ease-in-out;
+    transition: width 200ms ease-in-out ;
+}
+
+/* CARD */
+.card{
+    background-color: white;
+    width: 800px;
+    min-height: 400px;
+    margin:45px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* x y blur spread and color */
+    box-shadow: 4px 8px 6px 2px rgba(0, 0, 0, 0.4);
+
+    animation-name: up;
+    animation-duration: 200ms;
+    /* Terminar no to */
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+@keyframes up {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }to{
+        opacity: 1;
+    }
+}
+.avatar{
+    background: url("https://source.unsplash.com/collection/1652732") no-repeat center center;
+    background-size: cover;
+}   
+
+
+/* DETAILS */
+
+.details{
+    padding: 2rem;
+}
+.details .item{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 16px 0;
+}
+.details .item:last-child{
+    border: none;
+}
+.details h3,
+.details .item div:nth-child(1) {
+    font-size: 14px;
+    line-height: 24px;
+    color: #777;
+    letter-spacing: 0.7px;
+    font-weight: normal;
+}
+.details .item div:nth-child(2) {
+    color: #555;
+    font-weight:bold;
+    font-size: 18px;
+}
+.details h3{
+    text-transform:uppercase;
+    font-weight:bold;
+    color: var(--main-color);
+}
+
+.details .item div:nth-child(2) span {
+    padding: 8px 16px;
+    background-color: var(--secondary-color);
+    border-radius:18px;
+    color: #777;
+    margin-right: 8px;
+    margin-top: 8px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 12px;
 }

@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server"
+    "start":"npm-run-all -p nodemon browsersync",
+    "nodemon": "nodemon server",
+    "browsersync": "browser-sync start --proxy localhost:8080 --files 'public, views'"
   },
   "repository": {
     "type": "git",
