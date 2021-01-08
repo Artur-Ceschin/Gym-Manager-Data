@@ -2,21 +2,31 @@
   "name": "Acedemy-control",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "intructors.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "nunjucks": "^3.2.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.13",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5"
+  },
   "scripts": {
-    "start":"npm-run-all -p nodemon browsersync",
+    "start": "npm-run-all -p nodemon browsersync",
     "nodemon": "nodemon server",
-    "browsersync": "browser-sync start --proxy localhost:8080 --files 'public, views'"
+    "browsersync": "browser-sync start --proxy http://localhost:8080 --files 'public, views"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Artur-Ceschin/Acedemy-control.git"
   },
-  "dependencies": {
-    "express": "^4.17.1",
-    "nunjucks": "^3.2.2"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Artur-Ceschin/Acedemy-control/issues"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.6"
-  }
+  "homepage": "https://github.com/Artur-Ceschin/Acedemy-control#readme"
 }

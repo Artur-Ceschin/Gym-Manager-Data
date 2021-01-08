@@ -1,37 +1,26 @@
 {% extends 'layout.njk' %}
 
 {% block content %}
-    <div class="card">
-        <section class="avatar"></section>
-        <section class="details">
-            <h3>Detalhes</h3>
-            <div class="item">
-                <div>Instrutor</div>
-                <div>Artur Ceschin</div>
-            </div>
+    <div class="card table-container">
 
-            <div class="item">
-                <div>Idade</div>
-                <div>20</div>
-            </div>
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th>Instrutor</th>
+                    <th>Atendimento</th>
+                </tr>
+            </thead>
 
-            <div class="item">
-                <div>Sexo</div>
-                <div>Masculino</div>
-            </div>
+            <tbody>
 
-            <div class="item">
-                <div>Acompanhamento</div>
-                <div>
-                    <span>Musculacao</span>
-                    <span>Crossfit</span>
-                </div>
-            </div>
+                {% for instructor in instructors %}
+                    <tr>
+                        <td>{{ instructor.name }}</td>
+                        <td>{{ instructor.services}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
 
-            <div class="item">
-                <div>Desde</div>
-                <div>22/2/2015</div>
-            </div>
-        </section>
     </div>
 {% endblock content %}
