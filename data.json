@@ -1,17 +1,6 @@
 {
   "members": [
     {
-      "id": 2,
-      "avatar_url": "https://source.unsplash.com/collection/3798383",
-      "name": "Artur Peres Ceschin",
-      "email": "artur.ceschin@gmail.com",
-      "birth": 271468800000,
-      "gender": "M",
-      "blood": "B1",
-      "weight": "66",
-      "height": "189"
-    },
-    {
       "id": 3,
       "avatar_url": "https://source.unsplash.com/collection/3798383",
       "name": "Alvaro",
@@ -23,17 +12,6 @@
       "height": "185"
     },
     {
-      "id": 4,
-      "avatar_url": "https://source.unsplash.com/collection/1652732",
-      "name": "Cleiton",
-      "email": "3333@www",
-      "birth": 450144000000,
-      "gender": "F",
-      "blood": "B0",
-      "weight": "90",
-      "height": "180"
-    },
-    {
       "id": 5,
       "avatar_url": "https://images.unsplash.com/photo-1594381898411-846e7d193883?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Z3ltfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "name": "Caica",
@@ -43,6 +21,28 @@
       "blood": "A1",
       "weight": "77",
       "height": "187"
+    },
+    {
+      "id": 6,
+      "avatar_url": "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fHN0dWRlbnR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "name": "Cleiton",
+      "email": "paulo.ceschin@uol.com.br",
+      "birth": 946598400000,
+      "gender": "M",
+      "blood": "O1",
+      "weight": "60",
+      "height": "180"
+    },
+    {
+      "id": 7,
+      "avatar_url": "https://images.unsplash.com/photo-1545696968-1a5245650b36?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fHN0dWRlbnR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "name": "Chauping",
+      "email": "3333@www",
+      "birth": 597369600000,
+      "gender": "M",
+      "blood": "AB1",
+      "weight": "60",
+      "height": "160"
     }
   ],
   "instructors": [
@@ -52,7 +52,7 @@
       "name": "Cleitona",
       "birth": 552528000000,
       "gender": "F",
-      "services": "Ginasta, natacao, academia, crossfit",
+      "services": "Ginasta, natacao",
       "created_at": 1609873848380
     },
     {
