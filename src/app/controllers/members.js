@@ -1,7 +1,7 @@
 const {
     age,
     date
-} = require('../lib/utils');
+} = require('../../lib/utils');
 
 module.exports = {
     index(req, res) {
