@@ -8,7 +8,7 @@ for (item of menuItems) {
     }
 }
 
-const formDelete = document.querySelector(".form-delete")
+const formDelete = document.querySelector("#form-delete")
 
 formDelete.addEventListener("submit", (event) => {
     const confirmation = confirm("Deseja deletar ?")
@@ -17,3 +17,5 @@ formDelete.addEventListener("submit", (event) => {
         event.preventDefault()
     }
 })
+
+console.log('i am here')

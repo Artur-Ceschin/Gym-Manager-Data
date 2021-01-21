@@ -10,9 +10,19 @@ const Instructor = require('../model/Instructor')
 module.exports = {
     index(req, res) {
 
-        Instructor.all(function(instructors){
-            return res.render('instructors/index', {instructors})
-        })
+        const { filter } = req.query
+
+        if( filter){
+            Instructor.findBy(filter, function(instructors){
+                return res.render('instructors/index', {instructors, filter})
+            })
+        }else{
+            Instructor.all(function(instructors){
+                return res.render('instructors/index', {instructors})
+            })
+        }
+
+
 
     },
     create(req, res) {
@@ -76,7 +86,7 @@ module.exports = {
     },
     delete(req, res) {
         Instructor.delete(req.body.id, function(){
-            return res.redirect(`/instructors`)
+            return res.redirect(`/instructors${req.body.id}`)
         })
     },
 }
