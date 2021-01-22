@@ -2,7 +2,20 @@
 
 {% block content %}
     <div class="card table-container">
-        <a href="/members/create">Novo</a>
+        <div class="header">
+            <a class="button" href="/members/create">Novo</a>
+
+            <form action="/members" method="get">
+                <input type="text"
+                    name="filter"
+                    placeholder="Filtrar por nome ou email"
+                    value="{{filter}}"
+                >
+
+                <button type="submit">Filtrar</button>
+            </form>
+
+        </div>
         <table width="100%">
             <thead>
                 <tr>
@@ -22,9 +35,12 @@
                         <td>
                             <span style="background-image:url({{ member.avatar_url }})"></span>
                             {{ member.name }}</td>
-                        <td> {{ member.email }}</td>
-                        <td> {{ member.weight }}kg</td>
-                        <td> {{ member.height }}cm</td>
+                        <td>
+                            {{ member.email }}</td>
+                        <td>
+                            {{ member.weight }}kg</td>
+                        <td>
+                            {{ member.height }}cm</td>
                         <td>
                             <a href="/members/{{ member.id}}">ver</a>
                         </td>
@@ -32,6 +48,7 @@
                 {% endfor %}
             </tbody>
         </table>
+        <div class="pagination" data-page="{{pagination.page}}" data-total="{{pagination.total}}" data-filter="{{filter}}"></div>
 
     </div>
 {% endblock content %}
